@@ -5,9 +5,9 @@ import { Card, CardContent } from '@/components/ui/card';
 
 export default function SignInPage() {
   return (
-    <div className="min-h-screen bg-background relative">
+    <div className="min-h-screen bg-background relative overflow-x-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-primary/5" />
+      <div className="absolute inset-0 bg-gradient-to-b from-muted/20 to-background" />
       <div className="absolute inset-0 opacity-[0.02]">
         <div className="absolute inset-0" style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.4'%3E%3Ccircle cx='20' cy='20' r='1.5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
@@ -24,12 +24,12 @@ export default function SignInPage() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex items-center justify-center px-6 py-12">
+      <div className="relative z-10 flex min-h-screen items-center justify-center px-4 py-8 sm:px-6 sm:py-12">
         <div className="w-full max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             
             {/* Left Side - Branding & Features */}
-            <div className="lg:pr-12">
+            <div className="hidden lg:block lg:pr-12">
               <div className="mb-8">
                 <div className="inline-flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
@@ -86,13 +86,27 @@ export default function SignInPage() {
             {/* Right Side - Sign In Form */}
             <div className="flex justify-center lg:justify-end">
               <div className="w-full max-w-md">
+                {/* Mobile Logo */}
+                <div className="mb-8 text-center lg:hidden">
+                  <div className="inline-flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
+                      <span className="text-primary-foreground font-bold text-lg">M</span>
+                    </div>
+                    <h1 className="text-3xl font-bold text-foreground">
+                      Muizti
+                    </h1>
+                  </div>
+                  <p className="text-muted-foreground">
+                    Nunca olvides un nombre importante
+                  </p>
+                </div>
                 <Card className="glass-effect hover-lift">
                   <CardContent className="p-8">
-                  <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-foreground mb-2">
+                  <div className="text-center mb-6 lg:mb-8">
+                    <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
                       Iniciar Sesión
                     </h3>
-                    <p className="text-muted-foreground">
+                    <p className="text-sm sm:text-base text-muted-foreground">
                       Accede a tu cuenta para continuar
                     </p>
                   </div>
