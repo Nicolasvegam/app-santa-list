@@ -29,11 +29,11 @@ export function EmojiCarousel({ inline = false }: EmojiCarouselProps) {
   }, []);
 
   const sizeClasses = inline 
-    ? "w-12 h-12 lg:w-20 lg:h-20" 
-    : "w-24 h-24 sm:w-32 sm:h-32";
+    ? "w-16 h-16 sm:w-20 sm:h-20" 
+    : "w-20 h-20 sm:w-24 sm:h-24";
 
   return (
-    <div className={`${inline ? 'inline-flex items-center' : 'flex justify-center items-center mt-8'}`}>
+    <div className={`${inline ? 'inline-flex items-center' : 'flex justify-center items-center'}`}>
       <div className={`relative ${sizeClasses}`}>
         {emojis.map((emoji, index) => (
           <div

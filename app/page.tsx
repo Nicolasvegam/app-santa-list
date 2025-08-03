@@ -29,11 +29,16 @@ export default function LandingPage() {
             <div className="animate-fade-in">
               <h1 className="text-5xl lg:text-7xl font-bold text-foreground mb-6 leading-tight">
                 Nunca olvides un{' '}
-                <span className="text-primary inline-flex items-center gap-2">
+                <span className="text-primary block sm:inline-flex sm:items-center sm:gap-3">
                   nombre importante
-                  <EmojiCarousel inline />
+                  <span className="hidden sm:inline-block">
+                    <EmojiCarousel inline />
+                  </span>
                 </span>
               </h1>
+              <div className="mb-6 -mt-4 sm:hidden">
+                <EmojiCarousel inline={false} />
+              </div>
             </div>
             
             <div className="animate-slide-up">
