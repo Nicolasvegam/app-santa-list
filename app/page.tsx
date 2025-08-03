@@ -15,8 +15,8 @@ export default function LandingPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative pt-16 pb-24 overflow-hidden">
-        <div className="absolute inset-0 bg-primary/5" />
+      <section className="relative pt-16 pb-24 overflow-hidden bg-background">
+        <div className="absolute inset-0 bg-gradient-to-b from-muted/20 to-background" />
         <div className="absolute inset-0 opacity-[0.02]">
           <div className="absolute inset-0" style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.4'%3E%3Ccircle cx='20' cy='20' r='1.5'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
@@ -147,7 +147,7 @@ export default function LandingPage() {
             </Card>
           </div>
           
-          <div className="text-center mt-8">
+          <div className="text-center mt-8 block sm:hidden">
             <p className="text-sm text-muted-foreground mb-4">
               💡 <strong>Tip:</strong> Instala Muizti como app en tu dispositivo para acceso rápido
             </p>
@@ -253,91 +253,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-3">
-              Elige tu plan
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Comienza gratis y sube cuando quieras a Premium.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <Card className="glass-effect hover-lift">
-              <CardContent className="p-6">
-                <div className="text-center mb-6">
-                  <h3 className="text-xl font-bold text-foreground mb-2">Gratis</h3>
-                  <div className="text-3xl font-bold text-foreground mb-3">$0<span className="text-base text-muted-foreground">/mes</span></div>
-                </div>
-                
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-primary" />
-                    <span className="text-sm">Todas las funcionalidades básicas</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-primary" />
-                    <span className="text-sm">Espacios ilimitados</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-primary" />
-                    <span className="text-sm">Publicidad no invasiva</span>
-                  </li>
-                </ul>
-                
-                <Link href="/sign-up" className="block">
-                  <Button className="w-full" variant="outline">
-                    Empieza gratis
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-
-            <Card className="glass-effect hover-lift border-primary/20 relative">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-medium">
-                  Más popular
-                </span>
-              </div>
-              <CardContent className="p-6">
-                <div className="text-center mb-6">
-                  <h3 className="text-xl font-bold text-foreground mb-2">Premium</h3>
-                  <div className="text-3xl font-bold text-foreground mb-3">
-                    $4.99<span className="text-base text-muted-foreground">/mes</span>
-                  </div>
-                  <p className="text-muted-foreground text-sm">o $49/año (2 meses gratis)</p>
-                </div>
-                
-                <ul className="space-y-3 mb-6">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-primary" />
-                    <span className="text-sm">Sin anuncios</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-primary" />
-                    <span className="text-sm">Temas personalizados</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-primary" />
-                    <span className="text-sm">Exportación avanzada de datos</span>
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-primary" />
-                    <span className="text-sm">Soporte prioritario</span>
-                  </li>
-                </ul>
-                
-                <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-                  Ver Premium
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       {/* Final CTA Section */}
       <section className="py-20 bg-primary">
