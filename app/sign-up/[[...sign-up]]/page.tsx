@@ -24,9 +24,9 @@ export default function SignUpPage() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 flex min-h-screen items-center justify-center px-4 py-8 sm:px-6 sm:py-12">
+      <div className="relative z-10 flex min-h-screen items-center justify-center px-0 py-0 sm:px-6 sm:py-12">
         <div className="w-full max-w-6xl">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-0 lg:gap-12 items-center">
             
             {/* Left Side - Branding & Benefits */}
             <div className="hidden lg:block lg:pr-12">
@@ -97,62 +97,74 @@ export default function SignUpPage() {
             </div>
             
             {/* Right Side - Sign Up Form */}
-            <div className="flex justify-center lg:justify-end">
-              <div className="w-full max-w-md">
+            <div className="flex justify-center lg:justify-end w-full">
+              <div className="w-full lg:max-w-md">
                 {/* Mobile Logo */}
-                <div className="mb-8 text-center lg:hidden">
-                  <div className="inline-flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
-                      <span className="text-primary-foreground font-bold text-lg">M</span>
+                <div className="mb-4 text-center lg:hidden px-4">
+                  <div className="inline-flex items-center gap-3 mb-2">
+                    <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
+                      <span className="text-primary-foreground font-bold text-base">M</span>
                     </div>
-                    <h1 className="text-3xl font-bold text-foreground">
+                    <h1 className="text-2xl font-bold text-foreground">
                       Muizti
                     </h1>
                   </div>
-                  <p className="text-muted-foreground">
+                  <p className="text-sm text-muted-foreground">
                     Crea relaciones auténticas recordando nombres importantes
                   </p>
                 </div>
-                <Card className="glass-effect hover-lift">
-                  <CardContent className="p-8">
-                  <div className="text-center mb-6 lg:mb-8">
-                    <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
+                <Card className="glass-effect hover-lift w-full border-0 shadow-none lg:border lg:shadow-sm">
+                  <CardContent className="p-0 sm:p-4 lg:p-8">
+                  <div className="text-center mb-4 px-4 sm:px-0 sm:mb-6 lg:mb-8">
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-foreground mb-1 sm:mb-2">
                       Crear Cuenta
                     </h3>
-                    <p className="text-sm sm:text-base text-muted-foreground">
+                    <p className="text-xs sm:text-sm lg:text-base text-muted-foreground">
                       Completa el registro para comenzar
                     </p>
                   </div>
                   
+                  <div className="px-4 sm:px-0">
                   <SignUp 
                     appearance={{
                       elements: {
                         rootBox: 'w-full',
-                        card: 'shadow-none border-0 p-0',
+                        card: 'shadow-none border-0 p-0 w-full',
                         headerTitle: 'hidden',
                         headerSubtitle: 'hidden',
                         socialButtonsBlockButton:
-                          'border-border hover:bg-accent text-foreground',
+                          'border-border hover:bg-accent text-foreground w-full min-h-[2.5rem] text-sm sm:text-base',
                         formButtonPrimary: 
-                          'bg-primary hover:bg-primary/90 text-primary-foreground font-medium py-3 rounded-lg transition-all duration-200',
+                          'bg-primary hover:bg-primary/90 text-primary-foreground font-medium py-2.5 sm:py-3 rounded-lg transition-all duration-200 w-full min-h-[2.5rem] text-sm sm:text-base',
                         formFieldInput:
-                          'border-input bg-background text-foreground',
+                          'border-input bg-background text-foreground min-h-[2.5rem] text-base px-3',
                         footerActionLink: 
-                          'text-primary hover:text-primary/80 font-medium',
+                          'text-primary hover:text-primary/80 font-medium text-sm',
                         identityPreviewEditButton:
-                          'text-muted-foreground hover:text-foreground',
+                          'text-muted-foreground hover:text-foreground text-sm',
                         formFieldLabel:
-                          'text-foreground font-medium'
+                          'text-foreground font-medium text-sm',
+                        dividerText: 'text-xs sm:text-sm text-muted-foreground',
+                        formFieldError: 'text-xs sm:text-sm text-destructive',
+                        formFieldSuccessText: 'text-xs sm:text-sm text-green-600',
+                        socialButtonsBlockButtonText: 'text-sm sm:text-base',
+                        identityPreviewText: 'text-sm text-muted-foreground',
+                        alert: 'text-xs sm:text-sm',
+                        alertText: 'text-xs sm:text-sm'
                       },
                       layout: {
                         socialButtonsPlacement: 'top'
+                      },
+                      variables: {
+                        fontSize: '14px'
                       }
                     }}
                   />
+                  </div>
                   </CardContent>
                 </Card>
                 
-                <div className="text-center mt-6">
+                <div className="text-center mt-4 px-4 sm:px-0 sm:mt-6">
                   <p className="text-sm text-muted-foreground">
                     ¿Ya tienes cuenta?{' '}
                     <Link href="/sign-in" className="text-primary hover:text-primary/80 font-medium">
